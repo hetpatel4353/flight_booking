@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Admin</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <style>
+        * {
+            font-family: Helvetica, sans-serif;
+        }
+        .b {
+            text-align: center;
+            margin: 10px;
+        }
+
+        .col-sm-4 {
+            text-align: center;
+        }
+
+        .btn-primary:hover {
+            background-color: black;
+            color: white;
+        }
+
+    </style>
+</head>
+<body style="background-color:#B9EDDD">
+<div style="background-color:#87CBB9 !important; " class="jumbotron text-center">
+    <h1>Admin</h1>
+</div>
+
+<div class="container">
+    <div class="row">
+        <div class="col-sm-4">
+            <form action="{{url_for('add_flight')}}">
+                <button type="submit" class="b btn-primary btn-lg">Add flight</button>
+            </form>
+        </div>
+        <div class="col-sm-4">
+            <form action="{{url_for('remove_flight')}}">
+                <button type="submit" class="b btn-primary btn-lg ">Remove Flight</button>
+            </form>
+        </div>
+        <div class="col-sm-4">
+            <form action="{{url_for('view_bookings')}}">
+                <button type="submit" class="b btn-primary btn-lg ">View Bookings</button>
+            </form>
+        </div>
+    </div>
+</div>
+
+
+</body>
+</html>

@@ -1,0 +1,17 @@
+* {
+    font-family: Helvetica, sans-serif;
+}
+
+.col-sm-6 {
+    text-align: center;
+}
+
+.b {
+    text-align: center;
+    margin: 10px;
+}
+
+.btn-primary:hover {
+    background-color: black;
+    color: white;
+}

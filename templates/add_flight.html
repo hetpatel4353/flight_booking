@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Add Flight</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <style>
+        * {
+            font-family: Helvetica, sans-serif;
+        }
+
+        .col-sm-6, .col-sm-12 {
+            text-align: center;
+            font-size: 20px;
+        }
+
+        a {
+            text-decoration: none;
+        }
+
+        .btn-primary:hover {
+            background-color: black;
+            color: white;
+        }
+
+        label, input, button, a {
+            margin: 10px;
+        }
+    </style>
+</head>
+<body style="background-color:#B9EDDD">
+<div style="background-color:#87CBB9 !important; " class="jumbotron text-center">
+    <h1>Add Flight</h1>
+</div>
+<div class="container">
+    <form method="post">
+        <div class="row">
+            <div class="col-sm-6">
+                <label for="flightno">Flight Number
+                    <input type="text" name="flightno" id="flightno">
+                </label><br>
+                <label for="start">Starting from
+                    <input type="text" name="start" id="start">
+                </label><br>
+                <label for="dest">Destination
+                    <input type="text" name="dest" id="dest">
+                </label><br>
+                <label for="avail">Availability
+                    <input type="text" name="avail" id="avail">
+                </label>
+            </div>
+            <div class="col-sm-6">
+                <label for="fromtime">Start time
+                    <input type="time" name="fromtime" id="fromtime">
+                </label><br>
+                <label for="totime">
+                    End time<input type="time" name="totime" id="totime">
+                </label><br>
+                <label for="fromdate">Start Date
+                    <input type="date" name="fromdate" id="fromdate">
+                </label><br>
+                <label for="enddate">End Date
+                    <input type="date" name="enddate" id="enddate">
+                </label>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-12">
+                <button type="submit" class="b btn-primary btn-lg">Submit</button>
+            </div>
+        </div>
+    </form>
+</div>
+
+
+</body>
+</html>

@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Success</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <style>
+        * {
+            font-family: Helvetica, sans-serif;
+        }
+
+        .col-sm-12 {
+            text-align: center;
+            font-size: 20px;
+
+        }
+
+        a {
+            text-decoration: none;
+            border: 1px solid;
+            padding:10px;
+        }
+        a:hover{
+            text-decoration: none;
+            color: white;
+            background-color:black;
+        }
+        label, input, button, a {
+            margin: 10px;
+        }
+    </style>
+</head>
+<body style="background-color:#B9EDDD">
+<div style="background-color:#87CBB9 !important; " class="jumbotron text-center">
+    <h1>Ticket booked Successfully</h1>
+</div>
+<div class="container">
+    <div class="row">
+        <div class="col-sm-12">
+            <table style="width: 100%">
+                <tr>
+                    <td>Flight number</td>
+                    <td>{{res[0][0]}}</td>
+                </tr>
+                <tr>
+                    <td>Start</td>
+                    <td>{{res[0][1]}}</td>
+                </tr>
+                <tr>
+                    <td>Destination</td>
+                    <td>{{res[0][2]}}</td>
+                </tr>
+                <tr>
+                    <td>Start Time</td>
+                    <td>{{res[0][3]}}</td>
+                </tr>
+                <tr>
+                    <td>End Time</td>
+                    <td>{{res[0][4]}}</td>
+                </tr>
+                <tr>
+                    <td>Start Date</td>
+                    <td>{{res[0][5]}}</td>
+                </tr>
+                <tr>
+                    <td>End Date</td>
+                    <td>{{res[0][6]}}</td>
+                </tr>
+            </table><br><br>
+            <a href="{{url_for('user',name=name)}}">Home</a>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>

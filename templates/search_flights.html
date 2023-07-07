@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Search Flights</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <style>
+        table, th, td {
+            border: 1px solid black;
+        }
+
+        * {
+            font-family: Helvetica, sans-serif;
+        }
+
+        .col-sm-12 {
+            text-align: center;
+            font-size: 20px;
+
+        }
+
+        a {
+            text-decoration: none;
+        }
+
+        .btn-primary:hover {
+            background-color: black;
+            color: white;
+        }
+
+        label, input, button, a {
+            margin: 10px;
+        }
+    </style>
+</head>
+<body style="background-color:#B9EDDD">
+<div style="background-color:#87CBB9 !important; " class="jumbotron text-center">
+    <h1>Search Flight</h1>
+</div>
+<div class="container">
+    <div class="row">
+        <div class="col-sm-12">
+            <form method="post">
+                <div class="col-sm-6">
+                    <label for="stdate">From Date
+                        <input type="date" name="stdate" id="stdate">
+                    </label>
+                    <label for="enddate">To Date
+                        <input type="date" name="enddate" id="enddate">
+                    </label>
+                </div>
+                <div class="col-sm-6">
+                    <label for="sttime">From Time
+                        <input type="time" name="sttime" id="sttime">
+                    </label><br>
+                    <label for="endtime">To Time
+                        <input type="time" name="endtime" id="endtime">
+                    </label>
+                </div>
+
+
+                <button type="submit" class="b btn-primary btn-lg">Submit</button>
+                <br>
+<!--                From date {{stdate}}-->
+<!--                To Date {{enddate}}-->
+<!--                From time {{sttime}}-->
+<!--                To time {{endtime}}-->
+                {% if res==[]%}
+                <h4>No flights available</h4>
+                {%else%}
+                <table style="width: 100%">
+                    <tr>
+                        <th>Flight Number</th>
+                        <th>Start</th>
+                        <th>Destination</th>
+                        <th>From Time</th>
+                        <th>To Time</th>
+                        <th>From Date</th>
+                        <th>To Date</th>
+                        <th>Availability</th>
+                    </tr>
+                    {% for i in res %}
+                    <tr>
+                        {% for j in i %}
+                        <td>{{j}}</td>
+                        {% endfor %}
+                    </tr>
+                    {% endfor %}
+                </table>
+            </form>
+            <form method="post" action="{{url_for('book_flight',name=name)}}">
+                <label for="flights">Choose flight number to book:</label>
+
+                <select name="flights" id="flights">
+                    {% for i in res1 %}
+                    <option value="{{i[0]}}">{{i[0]}}</option>
+                    {% endfor %}
+                </select>
+                <button type="submit" class="b btn-primary btn-lg">Proceed</button>
+            </form>
+            {%endif%}
+        </div>
+    </div>
+</div>
+
+
+</body>
+</html>

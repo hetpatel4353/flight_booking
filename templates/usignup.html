@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>User SignUp</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <link href="../static/usignup.css" rel="stylesheet" type="text/css">
+    <script src="../static/usignup.js"></script>
+    <script src="https://kit.fontawesome.com/77a8827d1a.js" crossorigin="anonymous"></script>
+</head>
+<body style="background-color:#B9EDDD">
+<div style="background-color:#87CBB9 !important; " class="jumbotron text-center">
+    <h1>User SignUp</h1>
+</div>
+<div class="container">
+    <div class="row">
+        <div class="col-sm-3"></div>
+        <div class="col-sm-6">
+            <form method="post">
+                <label>Email
+                    <input  type="text" name="email" id="email" placeholder="Enter Email">
+                </label><br>
+                <label for="uname">User Name
+                    <input type="text" name="uname" id="uname" placeholder="Enter User Name">
+                </label><br>
+                <label for="password">Enter Password
+                    <input type="password" name="password" id="password"
+                           placeholder="Enter Password">
+                </label>
+                <button type="button" id="eye" onclick="show()"><i class="fa-solid fa-eye"></i></button>
+
+                <br>
+                <label for="passwordc">Confirm Password
+                    <input type="password" name="passwordc" id="passwordc"
+                           placeholder="Confirm Password">
+                </label>
+                <br>
+                <button type="submit" class="b btn-primary btn-lg" >Submit</button>
+                <div class="b">{{msg}}</div>
+                <a class="b" href="{{url_for('landing')}}">HOME</a>
+            </form>
+        </div>
+        <div class="col-sm-3"></div>
+    </div>
+</div>
+
+
+</body>
+</html>
